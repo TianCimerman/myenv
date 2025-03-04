@@ -286,7 +286,7 @@ function clearContent() {
 // Function to load an external website and clear existing content
 function loadPage(url) {
 // Hide all visible content
-document.querySelectorAll('#osnova, #myChart, #side, #spodnji, #ura, #napoved, #naslov_3,#food_2,#time_2,#time,#food, #switch').forEach(element => {
+document.querySelectorAll('#osnova, #myChart, #side, #spodnji, #ura, #napoved, #naslov_3,#food_2,#time_2, #time,#food, #switch').forEach(element => {
     element.style.display = 'none';
 });
 
@@ -296,23 +296,26 @@ var iframe = document.getElementById('contentFrame');
 iframe.style.display = 'block';  // Make iframe visible
 iframe.src = url;  // Set the iframe's source to the clicked link
 }
+// Set the iframe's source to the clicked link
+
+
+
 
 function loadFeder() {
+    document.getElementById("contentFrame").src = "/feder";  
 
-  document.querySelectorAll('#osnova, #myChart, #side, #spodnji, #ura, #napoved').forEach(element => {
-    element.style.display = 'none';
-    var iframe = document.getElementById('contentFrame');
-    iframe.style.display = 'none';  // Make iframe visible
-  });
+      document.querySelectorAll('#osnova, #myChart, #side, #spodnji, #ura, #napoved').forEach(element => {
+        element.style.display = 'none';
+      });
 
-  document.querySelectorAll('#naslov_3,#food_2,#time_2,#time,#food, #switch').forEach(element => {
-    element.style.display = 'block';
-    document.body.style.backgroundColor = '#808080';
-    
-  });
+
+      // Show the iframe and load the website into it
+      var iframe = document.getElementById('contentFrame');
+      iframe.style.display = 'block';  // Make iframe visible
+      iframe.src = url;  // Set the iframe's source to the clicked link
+
+
 }
-
-
 
 function getInputValue(inputId) {
   const value = document.getElementById(inputId).value.trim(); // Trim whitespace

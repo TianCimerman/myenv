@@ -31,7 +31,12 @@ def home():
     """
     return render_template('index.html')  # Ensure you have an 'index.html' file in the templates directory
 
-# Helper function to get current weather data
+
+
+@app.route('/feder')
+def about():
+    """Serve the about page."""
+    return render_template('feder.html')
 
 
 

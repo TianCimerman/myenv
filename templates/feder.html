@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="noindex" />
+        <title>Weather Station</title>
+    
+
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+        <script src="https://kit.fontawesome.com/818da673e2.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/d5fba335cd.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/feder.css') }}">
+
+        
+    </head>
+<body>
+
+
+        <div id="vrsta_1">
+
+                <div id="time" >
+                    <h1 id="naslov_2">Čas hranjenja</h1>
+                    <div
+                    class="RadialProgress2"
+                    role="progressbar"
+                    aria-valuenow="5"
+                    aria-valuemin="0"
+                    aria-valuemax="20"
+                    ></div>
+        
+                    <input type="range" value="5" min="0" max="25" id="input_2" />
+                    <button id="btn_2" onclick="onButtonClick2()">Apply</button>
+                </div>
+                <div id="food">
+                    <h1 id="naslov_1"> Količina</h1>
+                        <div
+                        class="RadialProgress5"
+                        role="progressbar"
+                        aria-valuenow="5"
+                        aria-valuemin="0"
+                        aria-valuemax="20"
+                    ></div>
+            
+                    <input type="range" value="5" min="0" max="25" id="input_5" />
+    
+                    <button id="btn_1" onclick="onButtonClick()">Apply</button>
+            </div>
+        
+        
+              
+                <div id="food_2">
+                    
+                    <h1 id="naslov_4"> Količina</h1>
+                        <div
+                        class="RadialProgress3"
+                        role="progressbar"
+                        aria-valuenow="5"
+                        aria-valuemin="0"
+                        aria-valuemax="20"
+                    ></div>
+            
+                    <input type="range" value="5" min="0" max="25" id="input_3" />
+        
+        
+            </div>
+
+            <div id="time_2" >
+                <h1 id="naslov_5"> Čas hranjenja</h1>
+                <div
+                class="RadialProgress4"
+                role="progressbar"
+                aria-valuenow="5"
+                aria-valuemin="0"
+                aria-valuemax="20"
+                ></div>
+        
+                <input type="range" value="5" min="0" max="25" id="input_4" />
+                <button id="btn_3" onclick="onButtonClick3()">Apply</button>
+        
+            </div>
+            
+        </div>
+        <h1 id="naslov_3">Spremeni oboje</h1>
+        <div id="switch">
+        <label class="theme-switch">
+            <input type="checkbox" class="theme-switch__checkbox" id="themeSwitch">
+            <div class="theme-switch__container">
+                <div class="theme-switch__circle-container"></div>
+            </div>
+        </label>
+
+
+
+
+
+
+
+    <script src="{{ url_for('static', filename='js/feder.js') }}"></script>
+</body>
+</html>
