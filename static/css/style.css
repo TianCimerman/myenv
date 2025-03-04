@@ -1,0 +1,2014 @@
+
+
+
+
+body {
+    background-color: rgb(48, 57, 70);
+    overflow: hidden;
+
+}
+
+#osnova {
+    position: absolute;
+    color: white;
+    background-color: hsl(218, 46%, 8%);
+    height: 480px;
+    left: 150px;
+    width: 40%;
+    border-radius: 25px;
+    text-align: center;
+    top: 2%;
+
+
+
+}
+
+#myChart {
+    position: absolute;
+    top: 29%;
+    left: 52%;
+    width: 45%;
+    height: 620px;
+    background-color: hsl(218, 46%, 8%);
+    border-radius: 25px;
+    text-align: center;
+}
+.naslov_graf {
+    font-family: sans-serif;
+    font-size: 40px; /* Adjust size to your preference */
+    color: white; /* Text color */
+    text-align: center; /* Center-align the text */
+    margin-top: 20px; /* Add some space above */
+    margin-bottom: 20px; /* Add space below for separation */
+}
+
+.naslov {
+    padding-top: 3%;
+    font-family: sans-serif;
+    font-size: 40px;
+}
+
+#kraj {
+    padding-top: 3%;
+    font-family: sans-serif;
+    font-size: 40px;
+}
+
+.rob {
+    position: absolute;
+    top: 25%;
+    left: 12%;
+    padding: 10px;
+    height: 300px;
+    border-radius: 15px;
+    width: 5em;
+    background-color: hsl(216, 30%, 18%);
+    display: flex;
+    gap: 20px;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-evenly; /* Space icons evenly within the container */
+    align-items: center; /* Center icons horizontally */
+}
+
+#wethicon, #tempicon, #humiicon {
+    font-size: 60px;
+}
+
+#wethicon {
+    color: orange;
+}
+
+#tempicon {
+    color: orange;
+    padding-left: 15px;
+}
+
+#humiicon {
+    color: orange;
+}
+
+
+
+.line_1, .line_2, .line_3 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 38%;
+    margin-top: 0%;
+}
+
+
+.vreme {
+    font-family: sans-serif;
+    font-size: 2.5;
+    padding-top: 10%;
+    margin-right: 40px;
+}
+.line_1 {
+    display: flex;               /* Enable Flexbox layout */
+    flex-direction: row;         /* Arrange items in a horizontal row */
+     /* Center the items horizontally */
+    padding-top: -60px;
+    padding-left: -120px;         /* Center the items vertically */
+    gap: 130px;                   /* Add space between items (optional) */
+}
+.line_2 {
+    margin-top: 4%;
+    padding-right: 40px;
+    
+}
+
+.line_3 {
+    margin-top: 6%;
+}
+
+.tempertaura {
+    font-family:sans-serif;
+    align-items: center;
+    padding-top: 10px;
+    font-size: 40px;
+}
+#vrsta{
+    font-family:sans-serif;
+    font-size: 40px;
+    align-items: center;
+    padding-top: 10px;
+    font-size: 40px;
+}
+#hum{
+    font-family:sans-serif; 
+    align-items: center; 
+    padding-top: 10px; 
+    font-size: 40px;
+    padding-left: -40px;
+}
+#icon{
+    font-size: 80px;
+    padding-top: 50px;
+}
+
+#spodnji {
+    position: absolute;
+    color: white;
+    background-color: hsl(218, 46%, 8%);
+    height: 370px;
+    left: 150px;
+    width: 40%;
+    border-radius: 25px;
+    text-align: center;
+    top: 57%;
+
+}
+.loc_2{
+    font-family: sans-serif;
+    padding-top: 2%;
+    font-size: 40px;
+}
+.rob_2 {
+    position: absolute;
+    top: 25%;
+    left: 12%;
+    padding: 10px;
+    height: 230px;
+    border-radius: 15px;
+    width: 5em;
+    background-color: hsl(216, 30%, 18%);
+    display: flex;
+    gap: 20px;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-evenly; /* Space icons evenly within the container */
+    align-items: center; /* Center icons horizontally */
+}
+
+.line_4, .line_5 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 39%;
+    margin-top: 0%;
+    font-size: 40px;
+}
+.line_4 {
+    display: flex;               /* Enable Flexbox layout */
+    flex-direction: row;         /* Arrange items in a horizontal row */
+     /* Center the items horizontally */
+    padding-top: 60px;
+    padding-left: -120px;         /* Center the items vertically */
+    gap: 70px;                   /* Add space between items (optional) */
+}
+.line_5 {
+    margin-top: 8%;
+    padding-right: 40px;
+    font-family: sans-serif;
+    
+}
+#hum_2{
+    font-family: sans-serif;
+    padding-top: 60px;
+}
+#ura{
+    position: absolute;
+    color: white;
+    background-color: hsl(218, 46%, 8%);
+    height: 220px;
+    left: 52%;
+    width: 45%;
+    border-radius: 25px;
+    text-align: center;
+    top: 2%;
+}
+#hour_icon{
+    position: absolute;
+    font-size: 80px;
+    padding-top: 7%;
+    right: 85%;
+}
+
+#ura_2, #minute, #vmes {
+    position: absolute;
+    font-size: 80px;
+    font-family:sans-serif;
+
+}
+#ura_2{
+    left: 20%;
+
+    padding-top: 7%;
+}
+#vmes{
+    left: 32%;
+
+    padding-top: 6%;
+    animation: blink 1.5s step-start infinite;
+}
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+#minute{
+    padding-top: 7%;
+    left: 35.5%;
+}
+.vertical-line {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    border-left: 7px solid #ffffff;
+    border-radius: 25px; /* Line thickness and color */
+    height: 150px;              /* Line height */
+    margin: 10px;               /* Spacing around the line */
+}
+#koledar{
+    position: absolute;
+    font-size: 80px;
+    padding-top: 7%;
+    right: 35%;
+}
+#datum{
+    position: absolute;
+    font-size: 80px;
+    font-family:sans-serif;
+    left: 70%;
+    top: 27%;
+}
+
+
+#napoved {
+    position: absolute;
+    color: white;
+    background-color: hsl(218, 46%, 8%);
+    height: 782px;
+    left: 150px;
+    width: 40%;
+    border-radius: 25px;
+    text-align: center;
+    top: 2%;
+    display: none;
+
+
+}
+#naslov5{
+    padding-top: 3%;
+    font-family: sans-serif;
+    font-size: 40px;
+}
+
+
+#day_1{
+    padding-top: 70px;
+    font-family:sans-serif;
+    font-size: 35px;
+    gap: 50px;
+}
+#day1{
+    position: absolute;
+    left:8%;
+}
+#icon1{
+    position: absolute;
+    left:23%;
+    font-size: 50px;
+}
+#vrsta1{
+    padding-right: 50px;
+}
+#temp1{
+    position: absolute;
+    left:60%;
+}
+#crta1{
+    padding-top: 3%;
+}
+#crta2{
+    padding-top: 3.2%;
+}
+#crta3{
+    padding-top: 3%;
+}
+#crta4{
+    padding-top: 3%;
+}
+#crta5{
+    padding-top: 3%;
+}
+
+
+#day_2{
+    padding-top: 60px;
+    font-family:sans-serif;
+    font-size: 35px;
+    gap: 50px;
+}
+#day2{
+    position: absolute;
+    left:8%;
+}
+#icon2{
+    position: absolute;
+    left:23%;
+    font-size: 50px;
+}
+#vrsta2{
+    padding-right: 50px;
+}
+#temp2{
+    position: absolute;
+    left:60%;
+}
+#day_3{
+    padding-top: 60px;
+    font-family:sans-serif;
+    font-size: 35px;
+
+}
+#day3{
+    position: absolute;
+    left:8%;
+}
+#icon3{
+    position: absolute;
+    left:23%;
+    font-size: 50px;
+}
+#vrsta3{
+    padding-right: 50px;
+}
+#temp3{
+    position: absolute;
+    left:60%;
+}
+
+#day_4{
+    padding-top: 60px;
+    font-family:sans-serif;
+    font-size: 35px;
+
+}
+#day4{
+    position: absolute;
+    left:8%;
+}
+#icon4{
+    position: absolute;
+    left:23%;;
+    font-size: 50px;
+}
+#vrsta4{
+    padding-right: 50px;
+}
+#temp4{
+    position: absolute;
+    left:60%;
+}
+#day_5{
+    padding-top: 60px;
+    font-family:sans-serif;
+    font-size: 35px;
+
+}
+#day5{
+    position: absolute;
+    left:8%;
+}
+#icon5{
+    position: absolute;
+    left:23%;
+    font-size: 50px;
+}
+#vrsta5{
+    padding-right: 50px;
+}
+#temp5{
+    position: absolute;
+    left:60%;
+}
+
+
+
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 150px; /* Increase width */
+    height: 75px; /* Increase height */
+    left: 43%;
+    top: 250px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-switch__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(63, 63, 63);
+    border-radius: 50px;
+    transition: 0.3s; /* Smooth background color transition */
+}
+
+/* Style for the sliding circle */
+.theme-switch__circle-container {
+    position: absolute;
+    top: 5px; /* Adjusted for the bigger size */
+    left: 5px; /* Adjusted for the bigger size */
+    width: 62px; /* Increased size of circle */
+    height: 62px; /* Increased size of circle */
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    transition: 0.3s; /* Smooth circle transition */
+}
+
+/* When the switch is checked (theme is active), change background to the specified color */
+.theme-switch input:checked + .theme-switch__container {
+    background-color: #13eca7; /* Apply your specified color */
+}
+
+/* Move the circle when the switch is checked */
+.theme-switch input:checked + .theme-switch__container .theme-switch__circle-container {
+    left: 83px; /* Adjusted based on the new size */
+}
+
+#btn_1 {
+        position: absolute; 
+        left: -10%;
+        left: 150px; 
+}
+
+
+.RadialProgress5 {
+    --primary-color: #13eca7;
+    --holesize: 55%;
+    --track-bg: hsl(233 34% 92%);
+    --progress: 0%;
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+  
+    block-size: 20vmin;
+    inline-size: 20vmin;
+    min-inline-size: 50px;
+    min-block-size: 50px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    font-weight: 700;
+    font-size: max(5vmin, 1.4rem);
+    font-family: sans-serif;
+  }
+  
+  .RadialProgress5::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+    background: conic-gradient(
+      var(--primary-color) var(--progress, 0%),
+      var(--track-bg) var(--progress, 0%) 100%
+    );
+    mask-image: radial-gradient(
+      transparent var(--holesize),
+      black calc(var(--holesize) + 0.5px)
+    );
+  }
+  
+  
+  #input_5 {
+    -webkit-appearance: none;
+    margin-top: 50px;
+    width: 10%;
+    height: 20px;
+    margin-left: -15px;
+    margin-left: 10px;
+
+    background: linear-gradient(to right, #13eca7 0%, #13eca7 0%, #e0e0e0 0%);
+    border-radius: 20px;
+    outline: none;
+  }
+  
+  #input_5::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: #13eca7;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  }
+
+
+  
+
+
+  .RadialProgress2 {
+    --primary-color: #13eca7;
+    --holesize: 55%;
+    --track-bg: hsl(233 34% 92%);
+    --progress: 0%;
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+  
+    block-size: 20vmin;
+    inline-size: 20vmin;
+    min-inline-size: 50px;
+    min-block-size: 50px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    font-weight: 700;
+    font-size: max(5vmin, 1.4rem);
+    font-family: sans-serif;
+  }
+  
+  .RadialProgress2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+    background: conic-gradient(
+      var(--primary-color) var(--progress, 0%),
+      var(--track-bg) var(--progress, 0%) 100%
+    );
+    mask-image: radial-gradient(
+      transparent var(--holesize),
+      black calc(var(--holesize) + 0.5px)
+    );
+  }
+  
+  #input_2 {
+    -webkit-appearance: none;
+    margin-top: 50px;
+    width: 10%;
+    height: 20px;
+    margin-left: -15px;
+    margin-left: 10px;
+
+    background: linear-gradient(to right, #13eca7 0%, #13eca7 0%, #e0e0e0 0%);
+    border-radius: 20px;
+    outline: none;
+  }
+  
+  #input_2::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: #13eca7;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  h1{
+    font-family: sans-serif;
+
+}
+
+
+#vrsta_1 {   
+    display: none;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    margin-bottom: 500px;
+    width: 90%;
+    left: 65%;
+    top: 10%;
+}
+#time {
+    position: absolute;
+    top: 15%;
+    display: none;
+    width: 100%;
+    right: 60%;
+  }
+#food{
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: -40%; 
+    width: 100%;
+  }
+#switch{
+    display: none;
+    position: absolute;
+    top: 60%;
+    width: 90%;
+    left: 5%;
+
+}
+#naslov_1
+{
+    margin-left: -50px;
+}
+#naslov_2
+{
+    margin-left: -80px;
+}
+#btn_2{
+    position: absolute;
+    top: 128%;
+    left: 3%;
+    background-color:#13eca7; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 15px 32px; /* Add padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Space around the button */
+    cursor: pointer; /* Change cursor on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+#btn_1{
+    position: absolute;
+    top: 130%;
+    left: 2%;
+    background-color:#13eca7; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 15px 32px; /* Add padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Space around the button */
+    cursor: pointer; /* Change cursor on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+button:active {
+    background-color: #3e8e41; /* Even darker green when clicked */
+    transform: scale(0.98); /* Slightly shrink when clicked */
+}
+
+
+
+
+.RadialProgress3 {
+    --primary-color: #13eca7;
+    --holesize: 55%;
+    --track-bg: hsl(233 34% 92%);
+    --progress: 0%;
+    margin-top: 50px;
+
+    color: rgb(0, 0, 0);
+  
+    block-size: 20vmin;
+    inline-size: 20vmin;
+    min-inline-size: 50px;
+    min-block-size: 50px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    font-weight: 700;
+    font-size: max(5vmin, 1.4rem);
+    font-family: sans-serif;
+  }
+  
+  .RadialProgress3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+    background: conic-gradient(
+      var(--primary-color) var(--progress, 0%),
+      var(--track-bg) var(--progress, 0%) 100%
+    );
+    mask-image: radial-gradient(
+      transparent var(--holesize),
+      black calc(var(--holesize) + 0.5px)
+    );
+  }
+  
+  #input_3 {
+    
+    -webkit-appearance: none;
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    height: 20px;
+
+    background: linear-gradient(to right, #13eca7 0%, #13eca7 0%, #e0e0e0 0%);
+    border-radius: 20px;
+    outline: none;
+  }
+  
+  #input_3::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: #13eca7;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  }
+
+
+  .RadialProgress4 {
+    --primary-color: #13eca7;
+    --holesize: 55%;
+    --track-bg: hsl(233 34% 92%);
+    --progress: 0%;
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+  
+    block-size: 20vmin;
+    inline-size: 20vmin;
+    min-inline-size: 50px;
+    min-block-size: 50px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    font-weight: 700;
+    font-size: max(5vmin, 1.4rem);
+    font-family: sans-serif;
+  }
+  
+  .RadialProgress4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+    background: conic-gradient(
+      var(--primary-color) var(--progress, 0%),
+      var(--track-bg) var(--progress, 0%) 100%
+    );
+    mask-image: radial-gradient(
+      transparent var(--holesize),
+      black calc(var(--holesize) + 0.5px)
+    );
+  }
+  
+  #input_4 {
+    -webkit-appearance: none;
+    margin-top: 50px;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to right, #13eca7 0%, #13eca7 0%, #e0e0e0 0%);
+    border-radius: 20px;
+    outline: none;
+  }
+  
+  #input_4::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: #13eca7;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  }
+  #food_2{
+    display: none;
+    position: absolute;
+    margin-bottom: 50px;
+    left: 18%; 
+    width: 10%;
+
+
+  }
+  #time_2{
+    display: none;
+
+    position: absolute;
+
+    left: -7%; 
+    width: 10%;
+    margin-bottom: 50px;
+  }
+  #naslov_3
+{
+    position: absolute;
+    display: none;
+    left: 68%;
+    top: 3%;
+
+
+    white-space: nowrap;   
+}
+
+#naslov_4
+{
+    margin-left: -50px;
+    white-space: nowrap;   
+}  #naslov_5
+{
+    margin-left: -70px;
+    white-space: nowrap;   
+}
+
+#btn_3{
+    position: absolute;
+    top: 132%;
+    left: 155%;
+    background-color:#13eca7; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 15px 32px; /* Add padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Space around the button */
+    cursor: pointer; /* Change cursor on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #D96AA7;
+    --secondary-color: hsl(218, 46%, 8%);
+    --complimentary-color: #88BFB5;
+    --contrast-color: #F2E527;
+    --light-color: #D2A9D9;
+}
+
+.container {
+    background: rgb(48, 57, 70);
+    min-height: 100vh;
+    font-family: Montserrat, sans-serif;
+}
+
+nav a {
+    font-size: 40px;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+}
+
+
+nav {
+    position: fixed;
+    left: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100vh;
+    background: var(--secondary-color);
+}
+
+section {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 0;
+    opacity: 0;
+    transition: all ease-in .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section h1 {
+    color: #fff;
+    font-size: 50px;
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+section:target {
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+#temp_2{
+    font-family: sans-serif;
+}
+
+section:target h1 {
+    opacity: 0;
+    animation: 2s fadeIn forwards .5s;
+}
+
+#contentFrame {
+    width: 98%;
+    margin-left: 4%;
+    height: 100vh;
+    border: none;
+}
+
+@keyframes fadeIn {
+    100% { opacity:1 }
+}
+
+
+
+
+
+/* For smaller screens (up to 768px) */
+@media (max-width: 1290px) {
+    /* Main container and chart */
+    #osnova {
+        width: 42%;
+        left: 10%;
+        height: 50%;
+        margin-top: 10px;  
+    }
+
+    #myChart {
+        width: 43%;
+        left: 55%;
+        height: 55%;
+        margin-top: 8%;  /* Add some space between divs */
+    }
+
+    /* Icon container */
+    .rob {
+        width: 15%;
+        height: 70%;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+    #wethicon, #tempicon, #humiicon {
+        font-size: 50px;
+    }
+
+    .line_1, .line_2, .line_3 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    #temp{
+        width: 50px;
+        font-size: 45px;
+    }
+
+    .vreme {
+
+
+        padding-bottom: 20px;
+        margin-right: 20px;
+
+    }
+    .line_1 {
+        display: flex;               /* Enable Flexbox layout */
+        flex-direction: row;         /* Arrange items in a horizontal row */
+        justify-content: center;     /* Center the items horizontally */
+        align-items: center;         /* Center the items vertically */
+        gap: 0px; 
+        margin-top: 5%; 
+        margin-right: 80px;
+        white-space: nowrap;     
+    }
+    
+    .line_2 {
+        margin-top: 2%;
+   
+        margin-right: 250px;
+        white-space: nowrap;
+    }
+    
+    .line_3 {
+        margin-top: 4%;
+        margin-right: 60px;
+        margin-right: 150px;
+    }
+    
+    .tempertaura {
+
+        align-items: center;
+        padding-top: 10px;
+        padding-left: 5px;
+        font-size: 45px;
+    }
+    #vrsta{
+
+        font-size: 60px;
+        align-items: center;
+        padding-top: 10px;
+        font-size: 45px;
+    }
+    #hum{
+
+        align-items: center; 
+        padding-top: 10px; 
+        font-size: 45px;
+        padding-right: 30px;
+    }
+    #icon{
+        font-size: 60px;
+        padding-top: 20px;
+        margin-left: 30px;
+
+        align-items: right;
+    }
+       
+    .icon {
+        font-size: 250px;
+    }
+
+    .vreme, .tempertaura {
+        font-size: 30px;
+    }
+    #spodnji {
+        position: absolute;
+        color: white;
+        background-color: hsl(218, 46%, 8%);
+        height: 40%;
+        left: 10%;
+        width: 42%;
+        border-radius: 25px;
+        text-align: center;
+        top: 57%;
+    }
+    .loc_2{
+        font-family: sans-serif;
+        padding-top: 2%;
+        font-size: 40px;
+    }
+    .rob_2 {
+        position: absolute;
+        top: 25%;
+        left: 12%;
+        padding: 10px;
+        height: 200px;
+        border-radius: 15px;
+        width: 5em;
+        background-color: hsl(216, 30%, 18%);
+        display: flex;
+        gap: 20px;
+        flex-direction: column; /* Stack items vertically */
+        justify-content: space-evenly; /* Space icons evenly within the container */
+        align-items: center; /* Center icons horizontally */
+    }
+    
+    .line_4, .line_5 {
+
+        align-items: center;
+        padding-left: 39%;
+
+        font-size: 45px;
+    }
+    .line_4 {
+        display: flex;               /* Enable Flexbox layout */
+        flex-direction: row;         /* Arrange items in a horizontal row */
+         /* Center the items horizontally */
+        padding-top: 50px;
+        padding-left: -120px;         /* Center the items vertically */
+
+        font-size: 45px;                   /* Add space between items (optional) */
+    }
+    .line_5 {
+        margin-top: 7%;
+        padding-right: 40px;
+        font-family: sans-serif;
+        font-size: 45px;
+        
+    }
+    #ura{
+        position: absolute;
+        color: white;
+        background-color: hsl(218, 46%, 8%);
+        height: 280px;
+        left: 55%;
+        width: 43%;
+        border-radius: 25px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    #hour_icon{
+        position: absolute;
+        font-size: 80px;
+        padding-top: 7%;
+        right: 70%;
+        color: orange;
+    }
+    
+    #ura_2, #minute, #vmes {
+        position: absolute;
+        font-size: 80px;
+        font-family:sans-serif;
+        padding-top: 7%;
+    
+    }
+    #ura_2{
+        left: 44%;
+    
+  
+    }
+    #vmes{
+        left: 61%;
+    
+ 
+    }
+    #minute{
+
+        left: 66%;
+    }
+
+    #koledar{
+        position: absolute;
+        font-size: 80px;
+        padding-top: 28%;
+        right: 71%;
+        color: orange;
+    }
+    #datum{
+        position: absolute;
+        font-size: 80px;
+        font-family:sans-serif;
+        left: 45%;
+        padding-top: 15%;
+    }
+
+
+    #napoved {
+        position: absolute;
+        color: white;
+        background-color: hsl(218, 46%, 8%);
+        height: 753px;
+        left: 100px;
+        width: 46%;
+        border-radius: 25px;
+        text-align: center;
+        top: 3%;
+    
+    
+    }
+    #naslov5{
+        padding-top: 3%;
+        font-family: sans-serif;
+        font-size: 40px;
+    }
+    
+    
+    #day_1{
+        padding-top: 70px;
+        font-family:sans-serif;
+        font-size: 30px;
+        gap: 50px;
+        white-space: nowrap;
+    }
+    #day1{
+        position: absolute;
+        left:8%;
+    }
+    #icon1{
+        position: absolute;
+        left:23%;
+        font-size: 50px;
+    }
+    #vrsta1{
+        padding-right: 50px;
+    }
+    #temp1{
+        position: absolute;
+        left:60%;
+    }
+    #crta1{
+        padding-top: 3%;
+    }
+    #crta2{
+        padding-top: 3.2%;
+    }
+    #crta3{
+        padding-top: 3%;
+    }
+    #crta4{
+        padding-top: 3%;
+    }
+    #crta5{
+        padding-top: 3%;
+    }
+    
+    
+    #day_2{
+        padding-top: 70px;
+        font-family:sans-serif;
+        font-size: 30px;
+        gap: 50px;
+        white-space: nowrap;
+    }
+    #day2{
+        position: absolute;
+        left:8%;
+    }
+    #icon2{
+        position: absolute;
+        left:23%;
+        font-size: 50px;
+    }
+    #vrsta2{
+        padding-right: 50px;
+    }
+    #temp2{
+        position: absolute;
+        left:60%;
+    }
+    #day_3{
+        padding-top: 70px;
+        font-family:sans-serif;
+        font-size: 30px;
+        gap: 50px;
+        white-space: nowrap;
+    
+    }
+    #day3{
+        position: absolute;
+        left:8%;
+    }
+    #icon3{
+        position: absolute;
+        left:22%;
+        font-size: 50px;
+        padding-top: -50px;
+        
+    }
+    #vrsta3{
+        padding-right: 50px;
+    }
+    #temp3{
+        position: absolute;
+        left:60%;
+    }
+    
+    #day_4{
+        padding-top: 70px;
+        font-family:sans-serif;
+        font-size: 30px;
+        gap: 50px;
+        white-space: nowrap;
+    
+    }
+    #day4{
+        position: absolute;
+        left:8%;
+    }
+    #icon4{
+        position: absolute;
+        left:23%;;
+        font-size: 50px;
+    }
+    #vrsta4{
+        padding-right: 50px;
+    }
+    #temp4{
+        position: absolute;
+        left:60%;
+    }
+    #day_5{
+        padding-top: 70px;
+        font-family:sans-serif;
+        font-size: 30px;
+        gap: 50px;
+        white-space: nowrap;
+    
+    }
+    #day5{
+        position: absolute;
+        left:8%;
+    }
+    #icon5{
+        position: absolute;
+        left:23%;
+        font-size: 50px;
+    }
+    #vrsta5{
+        padding-right: 50px;
+    }
+    #temp5{
+        position: absolute;
+        left:60%;
+    }
+
+
+    #contentFrame {
+        width: 94%;
+        margin-left: 6.5%;
+        height: 100vh;
+        border: none;
+    }
+
+    #naslov_1
+{
+    margin-left: 20px;
+    font-size: 30px; 
+
+}
+#naslov_2
+{
+    margin-left: 0px;
+    font-size: 30px; 
+
+}
+#btn_2{
+    position: absolute;
+    top: 128%;
+    left: 2%;
+    background-color:#13eca7; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 15px 32px; /* Add padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Space around the button */
+    cursor: pointer; /* Change cursor on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+#btn_1{
+    position: absolute;
+    top: 130%;
+    margin-right: -200px;
+    background-color:#13eca7; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 15px 32px; /* Add padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Space around the button */
+    cursor: pointer; /* Change cursor on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+button:active {
+    background-color: #3e8e41; /* Even darker green when clicked */
+    transform: scale(0.98); /* Slightly shrink when clicked */
+}
+
+
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 150px; /* Increase width */
+    height: 75px; /* Increase height */
+    left: 43%;
+    top: 200px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-switch__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(63, 63, 63);
+    border-radius: 50px;
+    transition: 0.3s; /* Smooth background color transition */
+}
+
+/* Style for the sliding circle */
+.theme-switch__circle-container {
+    position: absolute;
+    top: 5px; /* Adjusted for the bigger size */
+    left: 5px; /* Adjusted for the bigger size */
+    width: 62px; /* Increased size of circle */
+    height: 62px; /* Increased size of circle */
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    transition: 0.3s; /* Smooth circle transition */
+}
+
+/* When the switch is checked (theme is active), change background to the specified color */
+.theme-switch input:checked + .theme-switch__container {
+    background-color: #13eca7; /* Apply your specified color */
+}
+
+/* Move the circle when the switch is checked */
+.theme-switch input:checked + .theme-switch__container .theme-switch__circle-container {
+    left: 83px; /* Adjusted based on the new size */
+}
+
+
+
+
+.RadialProgress {
+    --primary-color: #13eca7;
+    --holesize: 55%;
+    --track-bg: hsl(233 34% 92%);
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+
+
+    block-size: 20vmin;
+    inline-size: 20vmin;
+    min-inline-size: 50px;
+    min-block-size: 50px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    font-weight: 700;
+    font-size: max(5vmin, 1.4rem);
+    font-family: sans-serif;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 50%;
+      z-index: -1;
+      background: conic-gradient(
+        var(--primary-color) var(--progress, 0%),
+        var(--track-bg) var(--progress, 0%) 100%
+      );
+      
+      mask-image: radial-gradient(
+        transparent var(--holesize),
+        black calc(var(--holesize) + 0.5px)
+      );
+    }
+  }
+  
+  #input_1 {
+    -webkit-appearance: none;
+    margin-top: 50px;
+    margin-left: 10px;
+    width: 10%;
+    height: 20px;
+    background: linear-gradient(to right, #13eca7 0%, #13eca7 0%, #e0e0e0 0%);
+    border-radius: 20px;
+    outline: none;
+  }
+  
+  #input_1::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 20px;
+    border-radius: 100%;
+    background: #13eca7;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  }
+
+
+  .RadialProgress2 {
+    --primary-color: #13eca7;
+    --holesize: 55%;
+    --track-bg: hsl(233 34% 92%);
+    --progress: 0%;
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+  
+    block-size: 20vmin;
+    inline-size: 20vmin;
+    min-inline-size: 50px;
+    min-block-size: 50px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    font-weight: 700;
+    font-size: max(5vmin, 1.4rem);
+    font-family: sans-serif;
+  }
+  
+  .RadialProgress2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+    background: conic-gradient(
+      var(--primary-color) var(--progress, 0%),
+      var(--track-bg) var(--progress, 0%) 100%
+    );
+    mask-image: radial-gradient(
+      transparent var(--holesize),
+      black calc(var(--holesize) + 0.5px)
+    );
+  }
+  
+  #input_2 {
+    -webkit-appearance: none;
+    margin-top: 50px;
+    width: 10%;
+    height: 20px;
+    margin-left: -55px;
+    margin-left: 10px;
+
+    background: linear-gradient(to right, #13eca7 0%, #13eca7 0%, #e0e0e0 0%);
+    border-radius: 20px;
+    outline: none;
+  }
+  
+  #input_2::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: #13eca7;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  h1{
+    font-family: sans-serif;
+
+}
+.RadialProgress3 {
+    --primary-color: #13eca7;
+    --holesize: 55%;
+    --track-bg: hsl(233 34% 92%);
+    --progress: 0%;
+    margin-top: 50px;
+    margin-right: 250px;
+
+    color: rgb(0, 0, 0);
+  
+    block-size: 20vmin;
+    inline-size: 20vmin;
+    min-inline-size: 50px;
+    min-block-size: 50px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    font-weight: 700;
+    font-size: max(5vmin, 1.4rem);
+    font-family: sans-serif;
+  }
+  
+  .RadialProgress3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+    background: conic-gradient(
+      var(--primary-color) var(--progress, 0%),
+      var(--track-bg) var(--progress, 0%) 100%
+    );
+    mask-image: radial-gradient(
+      transparent var(--holesize),
+      black calc(var(--holesize) + 0.5px)
+    );
+  }
+  
+  #input_3 {
+    
+    -webkit-appearance: none;
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    height: 20px;
+    margin-right: 250px;
+
+    background: linear-gradient(to right, #13eca7 0%, #13eca7 0%, #e0e0e0 0%);
+    border-radius: 20px;
+    outline: none;
+  }
+  
+  #input_3::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: #13eca7;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  }
+
+
+  .RadialProgress4 {
+    --primary-color: #13eca7;
+    --holesize: 55%;
+    --track-bg: hsl(233 34% 92%);
+    --progress: 0%;
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+  
+    block-size: 20vmin;
+    inline-size: 20vmin;
+    min-inline-size: 50px;
+    min-block-size: 50px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    font-weight: 700;
+    font-size: max(5vmin, 1.4rem);
+    font-family: sans-serif;
+  }
+  
+  .RadialProgress4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+    background: conic-gradient(
+      var(--primary-color) var(--progress, 0%),
+      var(--track-bg) var(--progress, 0%) 100%
+    );
+    mask-image: radial-gradient(
+      transparent var(--holesize),
+      black calc(var(--holesize) + 0.5px)
+    );
+  }
+  
+  #input_4 {
+    -webkit-appearance: none;
+    margin-top: 50px;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to right, #13eca7 0%, #13eca7 0%, #e0e0e0 0%);
+    border-radius: 20px;
+    outline: none;
+  }
+  
+  #input_4::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: #13eca7;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  }
+  #food_2{
+    display: none;
+    position: absolute;
+    margin-bottom: 50px;
+    left: 18%; 
+    width: 10%;
+
+
+  }
+  #time_2{
+    display: none;
+
+    position: absolute;
+
+    left: -7%; 
+    width: 10%;
+    margin-bottom: 50px;
+  }
+  #naslov_3
+{
+    position: absolute;
+    display: none;
+    left: 65%;
+    top: 3%;
+    font-size: 40px;
+
+
+    white-space: nowrap;   
+}
+
+#naslov_4
+{
+    margin-left: 20px;
+
+    font-size: 30px; 
+}  #naslov_5
+{
+    margin-left: -10px;
+  
+    font-size: 30px; 
+
+}
+
+#btn_3{
+    position: absolute;
+    top: 132%;
+    left: 120%;
+    background-color:#13eca7; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 15px 32px; /* Add padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Space around the button */
+    cursor: pointer; /* Change cursor on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+}
+
+/* For even smaller screens (up to 480px) */
+@media (max-width: 480px) {
+    body {
+        overflow: auto;
+    }
+    #osnova {
+        width: 80%;
+        margin-left: 23px;
+        height: 42%;
+
+
+        
+    }
+
+    #myChart {
+        position: absolute;
+        width: 80%;
+        height: 35%;
+        margin-top: 395px;
+        margin-right: 150px;
+        left: 15%; 
+ 
+    }
+
+    .rob {
+        width: 15%;
+        height: 65%;
+        left: 8%;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        margin-top: 0px;
+    }
+
+    .line_1, .line_2, .line_3 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    #wethicon, #tempicon, #humiicon {
+        font-size: 30px;
+    }
+
+
+    .line_1, .line_2, .line_3 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 38%;
+        margin-top: -10%;
+    }
+    
+    
+    .vreme {
+
+        font-size: 40px;
+        
+        margin-left: -10px;
+
+    }
+    .line_1 {
+        display: flex;               /* Enable Flexbox layout */
+        flex-direction: row;         /* Arrange items in a horizontal row */
+
+        align-items: center;         /* Center the items vertically */
+                  /* Add space between items (optional) */
+    }
+    
+    .line_2 {
+        margin-top: 0%;
+        margin-right: 65px;
+    }
+    
+    .line_3 {
+        margin-top: 12%;
+        margin-right: 65px;
+    }
+    
+    .tempertaura {
+
+        align-items: center;
+        padding-top: 10px;
+        padding-left: 5px;
+        font-size: 30px;
+    }
+    #vrsta{
+
+        font-size: 30px;
+
+        padding-top: 60px;
+
+    }
+    #hum{
+
+        align-items: center; 
+        padding-top: 8px; 
+        font-size: 30px;
+        padding-right: 30px;
+    }
+    #icon{
+        font-size: 30px;
+        padding-top: 50px;
+        margin-left: 10px;
+
+        
+    }
+    #temp{
+        font-size: 30px;
+        padding-top: 8px;
+        margin-right: 40px;
+
+    }
+    #naslov_graf{
+        font-size: 20px;
+    }
+    .naslov {
+        padding-top: 3%;
+
+        font-size: 30px;
+    }
+    
+    #kraj {
+        padding-top: 3%;
+
+        font-size: 30px;
+    }
+    .naslov_graf {
+
+        font-size: 20px; /* Adjust size to your preference */
+ 
+    }
+    nav a {
+        font-size: 20px;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav {
+        position: fixed;
+        left: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 100vh;
+        width: 50px;
+
+        background: var(--secondary-color);
+    }
+    #ura{
+        display: none;
+
+    } 
+    #spodnji {
+        position: absolute;
+        color: white;
+        background-color: hsl(218, 46%, 8%);
+        height: 32%;
+        left: 10%;
+        width: 80%;
+        border-radius: 25px;
+        text-align: center;
+        top: 47%;
+        margin-left: 23px;
+    }
+    .loc_2{
+        font-family: sans-serif;
+        padding-top: 5%;
+        font-size: 30px;
+    }
+    .rob_2 {
+        position: absolute;
+        top: 30%;
+        left: 8%;
+        padding: 10px;
+        height: 140px;
+        border-radius: 15px;
+        width: 15%;
+        background-color: hsl(216, 30%, 18%);
+        display: flex;
+        gap: 20px;
+        flex-direction: column; /* Stack items vertically */
+        justify-content: space-evenly; /* Space icons evenly within the container */
+        align-items: center; /* Center icons horizontally */
+    }
+
+    .line_4, .line_5 {
+
+        align-items: center;
+        padding-left: 39%;
+
+        font-size: 45px;
+    }
+    .line_4 {
+        display: flex;               /* Enable Flexbox layout */
+        flex-direction: row;         /* Arrange items in a horizontal row */
+        /* Center the items horizontally */
+        padding-top: 50px;
+        padding-left: -120px;         /* Center the items vertically */
+
+        font-size: 30px;                   /* Add space between items (optional) */
+    }
+    .line_5 {
+        margin-top: 8%;
+        padding-right: 40px;
+        font-family: sans-serif;
+        font-size: 30px;
+        
+    }
+
+}

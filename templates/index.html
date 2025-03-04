@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="noindex" />
+        <title>Weather Station</title>
+    
+        <!-- External Stylesheets -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+        <script src="https://kit.fontawesome.com/818da673e2.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/d5fba335cd.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
+        
+    </head>
+<body>
+
+
+
+
+    <div id="ura">
+        <i id="hour_icon" class="fa-regular fa-clock"></i>
+        <label id="ura_2"></label>
+        <label id="vmes">:</label>
+        <label id="minute"></label>
+
+        <i id="koledar" class="fa-solid fa-calendar-days"></i>
+        <p id="datum"></p>
+   
+
+   
+        
+    </div>
+    
+
+    <div id="osnova">
+        <!-- Title above the content -->
+
+
+        <h1 id="kraj"> Outside</h1>
+   
+
+        <!-- Container for .rob and .line_1 divs side by side -->
+            <!-- div.rob with icons -->
+            <div class="rob">
+                <i id="wethicon" class="fa-solid fa-sun"></i>
+                <i id="tempicon" class="fa-solid fa-temperature-low"></i>
+                <i id="humiicon" class="fi fi-ss-humidity"></i>
+            </div>
+
+            
+
+            <!-- div.line_1 with text and an icon -->
+            <div class="line_1">
+                <div class="vreme">
+                    <p id="vrsta"></p>
+                </div>
+                <div id="icon">
+                    <i></i>
+                </div>
+
+                   
+
+
+ 
+            </div>
+        <div class="line_2">
+            <div class="tempertaura">
+                <p id="temp"></p>
+            </div>
+        </div>
+
+        <div class="line_3">
+            <div class="humi">
+                <p id="hum"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="spodnji">
+        <h1 class="loc_2">Inside</h1>
+
+        <div class="rob_2">
+            <i id="tempicon" class="fa-solid fa-temperature-low"></i>
+            <i id="humiicon" class="fi fi-ss-humidity"></i>
+        </div>
+
+        <div class="line_4">
+            <div class="tempertaura_2">
+                <p id="temp_2"></p>
+            </div>
+        </div>
+
+        <div class="line_5">
+            <div class="humi_2">
+                <label id="hum_2"></label>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<div id="napoved">
+        <h1 id="naslov5">5-Day Forecast  </h1>
+    
+    <div id="day_1">
+            <label id="day1"></label>
+            <div id="icon1">
+                <i></i>
+            </div>
+            <label id="vrsta1"></label>
+            <label id="temp1"></label>
+    </div>
+    <div id="crta1">
+    <svg height="2" width="100%" >
+        <line x1="0" y1="1" x2="100%" y2="1" style="stroke:rgb(48, 57, 70);stroke-width:2" />
+      </svg>
+    </div>
+    <div id="day_2">
+        <label id="day2"></label>
+        <div id="icon2">
+            <i></i>
+        </div>
+        <label id="vrsta2"></label>
+        <label id="temp2"></label>
+    </div>
+    <div id="crta2">
+        <svg height="2" width="100%" >
+            <line x1="0" y1="1" x2="100%" y2="1" style="stroke:rgb(48, 57, 70);stroke-width:2" />
+          </svg>
+        </div>
+
+    <div id="day_3">
+        <label id="day3"></label>
+        <div id="icon3">
+            <i></i>
+        </div>
+        <label id="vrsta3"></label>
+        <label id="temp3"></label>
+    </div>
+    <div id="crta3">
+        <svg height="2" width="100%" >
+            <line x1="0" y1="1" x2="100%" y2="1" style="stroke:rgb(48, 57, 70);stroke-width:2" />
+          </svg>
+        </div>
+    <div id="day_4">
+        <label id="day4"></label>
+        <div id="icon4">
+            <i></i>
+        </div>
+        <label id="vrsta4"></label>
+        <label id="temp4"></label>
+    </div>
+    <div id="crta4">
+        <svg height="2" width="100%" >
+            <line x1="0" y1="1" x2="100%" y2="1" style="stroke:rgb(48, 57, 70);stroke-width:2" />
+          </svg>
+        </div>
+    <div id="day_5">
+        <label id="day5"></label>
+        <div id="icon5">
+            <i></i>
+        </div>
+        <label id="vrsta5"></label>
+        <label id="temp5"></label>
+    </div>
+    <div id="crta5">
+        <svg height="2" width="100%" >
+            <line x1="0" y1="1" x2="100%" y2="1" style="stroke:rgb(48, 57, 70);stroke-width:2" />
+          </svg>
+        </div>
+</div>
+
+
+
+        
+    </div>
+ 
+
+
+
+        <div id="myChart">
+
+            <h1 class="naslov_graf">Power consumption</h1>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/ag-charts-enterprise@10.3.3/dist/umd/ag-charts-enterprise.js"></script>
+
+    </div>
+    <nav>
+        <a href="javascript:void(0);" onclick="reloadPage();"><i class="fa-solid fa-house"></i></a>
+        <a href="javascript:loadPage('http://192.168.1.180/info.htm');" onclick="login();"><i class="fa-solid fa-fan"></i></a>
+        <a href="javascript:loadPage('http://192.168.1.160:3000');"><i class="fa-solid fa-chart-line"></i></a>
+        <a href="javascript:void(0);" onclick="loadFeder()"><i class="fa-solid fa-dog"></i></a>
+    </nav>
+    <iframe id="contentFrame" src=""></iframe>
+
+
+        <div id="vrsta_1">
+
+                <div id="time" >
+                    <h1 id="naslov_2">Čas hranjenja</h1>
+                    <div
+                    class="RadialProgress2"
+                    role="progressbar"
+                    aria-valuenow="5"
+                    aria-valuemin="0"
+                    aria-valuemax="20"
+                    ></div>
+        
+                    <input type="range" value="5" min="0" max="25" id="input_2" />
+                    <button id="btn_2" onclick="onButtonClick2()">Apply</button>
+                </div>
+                <div id="food">
+                    <h1 id="naslov_1"> Količina</h1>
+                        <div
+                        class="RadialProgress5"
+                        role="progressbar"
+                        aria-valuenow="5"
+                        aria-valuemin="0"
+                        aria-valuemax="20"
+                    ></div>
+            
+                    <input type="range" value="5" min="0" max="25" id="input_5" />
+    
+                    <button id="btn_1" onclick="onButtonClick()">Apply</button>
+            </div>
+        
+        
+              
+                <div id="food_2">
+                    
+                    <h1 id="naslov_4"> Količina</h1>
+                        <div
+                        class="RadialProgress3"
+                        role="progressbar"
+                        aria-valuenow="5"
+                        aria-valuemin="0"
+                        aria-valuemax="20"
+                    ></div>
+            
+                    <input type="range" value="5" min="0" max="25" id="input_3" />
+        
+        
+            </div>
+
+            <div id="time_2" >
+                <h1 id="naslov_5"> Čas hranjenja</h1>
+                <div
+                class="RadialProgress4"
+                role="progressbar"
+                aria-valuenow="5"
+                aria-valuemin="0"
+                aria-valuemax="20"
+                ></div>
+        
+                <input type="range" value="5" min="0" max="25" id="input_4" />
+                <button id="btn_3" onclick="onButtonClick3()">Apply</button>
+        
+            </div>
+            
+        </div>
+        <h1 id="naslov_3">Spremeni oboje</h1>
+        <div id="switch">
+        <label class="theme-switch">
+            <input type="checkbox" class="theme-switch__checkbox" id="themeSwitch">
+            <div class="theme-switch__container">
+                <div class="theme-switch__circle-container"></div>
+            </div>
+        </label>
+    </div>
+
+
+
+
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
